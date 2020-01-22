@@ -70,9 +70,9 @@ public class LoginStepDefs {
 
     @Then("the title should contains {string}")
     public void the_title_should_contains(String expectedTitle) {
+        BrowserUtils.waitFor(2);
         System.out.println("expectedTitle = " + expectedTitle);
         Assert.assertTrue(Driver.get().getTitle().contains(expectedTitle));
-
     }
 
     @Given("the user logged in as a {string}")
